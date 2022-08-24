@@ -1,0 +1,5 @@
+name: 'LAN Presence Device Driver V1'
+packageKey: 'lanpresencev1'
+permissions:
+    lan: {}
+    discovery: {}
