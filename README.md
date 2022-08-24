@@ -11,7 +11,9 @@ Available for install to SmartThings hub via my [shared projects channel](https:
 
 ## Usage
 
-Once installed to hub, use moble app to do a *Scan for nearby devices*.  A LAN Presence device will be created and found in the 'No room assign' room.  Additional devices can be created by tapping the 'Create Another Device' button on the device Controls screen.
+Once installed to hub, use moble app to do a *Scan for nearby devices*.  A LAN Presence device will be created and found in the 'No room assigned' room.  
+
+Additional devices can be created by tapping the 'Create Another Device' button on the device Controls screen.
 
 ### Device Settings
 * **LAN Device Name** - a unique device name; simple/short text only - no special characters or blanks
@@ -19,10 +21,12 @@ Once installed to hub, use moble app to do a *Scan for nearby devices*.  A LAN P
 * **Bridge Address** - IP and port (mandatory) address of the edgebridge server (e.g. '192.168.1.140:8088')
 
 ### Application message format
-Example http message:
+Example http message sent by an application:
 ```
 POST http://192.168.1.140:8088/devname/presence/present
 POST http://192.168.1.140:8088/devname/presence/notpresent
 ```
 
 where '192.168.1.140:8088' is address of edgebridge server, 'devname' is device name as configured in *LAN Device Name* in the SmartThings device Settings
+
+This message will be forwarded to the Edge driver on your hub, as long as the Edge driver has successfully registered with the edgebridge.
