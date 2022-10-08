@@ -27,6 +27,9 @@ POST http://192.168.1.140:8088/devname/presence/present
 POST http://192.168.1.140:8088/devname/presence/notpresent
 ```
 
-where '192.168.1.140:8088' is address of edgebridge server, 'devname' is device name as configured in *LAN Device Name* in the SmartThings device Settings
+where:
+* HTTP method *must* be **POST**
+* '192.168.1.140:8088' is address of edgebridge server
+* 'devname' is device name as configured in *LAN Device Name* in the SmartThings device Settings
 
 This message will be forwarded to the Edge driver on your hub, as long as the Edge driver has successfully registered with the edgebridge.
